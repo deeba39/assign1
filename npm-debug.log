@@ -1,11 +1,11 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
 1 verbose cli   'protractor' ]
 2 info using npm@1.4.23
 3 info using node@v0.10.31
-4 verbose node symlink C:\Program Files\nodejs\\node.exe
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
 5 verbose run-script [ 'preprotractor', 'protractor', 'postprotractor' ]
 6 info preprotractor angular-phonecat@0.0.0
 7 verbose unsafe-perm in lifecycle true
@@ -23,8 +23,8 @@
 12 error     npm owner ls angular-phonecat
 12 error There is likely additional logging output above.
 13 error System Windows_NT 6.2.9200
-14 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"
-15 error cwd C:\Users\abadee\angular-phonecat
+14 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"
+15 error cwd C:\Users\Kwabena\assign1
 16 error node -v v0.10.31
 17 error npm -v 1.4.23
 18 error code ELIFECYCLE
