@@ -4,10 +4,18 @@
 
 describe('PhoneCat App', function() {
 
+  it('should redirect index.html to index.html#/phones', function() {
+    browser.get('app/index.html');
+    browser.getLocationAbsUrl().then(function(url) {
+        expect(url.split('#')[1]).toBe('/phones');
+      });
+  });
+
+
   describe('Phone list view', function() {
 
     beforeEach(function() {
-      browser.get('app/index.html');
+      browser.get('app/index.html#/phones');
     });
 
 
@@ -57,10 +65,23 @@ describe('PhoneCat App', function() {
     it('should render phone specific links', function() {
       var query = element(by.model('query'));
       query.sendKeys('nexus');
-      element(by.css('.phones li a')).click();
+      element.all(by.css('.phones li a')).first().click();
       browser.getLocationAbsUrl().then(function(url) {
         expect(url.split('#')[1]).toBe('/phones/nexus-s');
       });
+    });
+  });
+
+
+  describe('Phone detail view', function() {
+
+    beforeEach(function() {
+      browser.get('app/index.html#/phones/nexus-s');
+    });
+
+
+    it('should display nexus-s page', function() {
+      expect(element(by.binding('phone.name')).getText()).toBe('Nexus S');
     });
   });
 });
